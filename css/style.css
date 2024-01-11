@@ -28,14 +28,37 @@ body{
 
     overflow-y: auto;
 }
+
+
+/* upgrade bar */
 .upgrade-bar{
-    width: 100%;
+    width: calc(100% - 230px);
     height: 90px;
 
     position: fixed;
 
     background-color: rgba(0, 0, 0, 0.2);
 }
+.upgrade-btn{
+    position: absolute;
+    top: 32px;
+    right: 20px;
+}
+.upgrade-btn a{
+    padding: 14px 40px;
+    text-decoration: none;
+
+    color: white;
+    border: 1px solid white;
+    border-radius: 50px;
+}
+
+
+
+
+
+
+
 /* song container */
 .song-container{
     height: 100%;
@@ -43,6 +66,7 @@ body{
     /* test */
     padding: 90px 18px 0px;
 }
+
 /* links */
 .navbar{
     padding: 16px 40px 32px;
@@ -57,9 +81,10 @@ body{
     text-decoration: none;
     color: #7e8188;
 }
+
 /* categories */
 .container-playlist{
-    margin-bottom: 40px;
+    padding-bottom: 40px;
 
     display: flex;
     gap: 14px;
@@ -136,7 +161,6 @@ body{
 
 
 /* MEDIA QUERY */
-/* laptop */
 @media screen and (max-width: 1440px){
     .img-container{
         max-width: 180px;
@@ -165,8 +189,10 @@ body{
     }
 
 }
-/* tablet */
 @media screen and (max-width: 768px){
+    .upgrade-bar{
+        width: calc(100% - 90px);
+    }
     .side-bar{
         width: 90px;
     }
