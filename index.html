@@ -13,9 +13,9 @@
     <title>Spotify web-app</title>
 </head>
 <body>
-    <div id="flex">
+    <div class="flex">
 
-
+        <!-- side bar -->
         <div class="side-bar">
             <div class="side-container">
                 <div class="logo">
@@ -69,13 +69,7 @@
             </div>
 
 
-
-
-
-
-
-
-
+            <!-- side bar mobile nascosta in laptop version -->
             <div class="side-bar-mobile-top">
                 <div class="logo-xs">
                     <img src="./img/logo-small.svg" alt="logo small">
@@ -97,23 +91,7 @@
             </div>
         </div>
 
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <!-- inizio pagina principale -->
         <div class="page">
             <div class="upgrade-bar">
                 <div class="upgrade-btn">
@@ -268,8 +246,57 @@
             </div>
         </div>
     </div>
-    <div id="play-bar">
 
+    <!-- play bar -->
+    <div id="play-bar">
+        <div class="play-bar-flex">
+
+            <div class="playbar-left">
+                <div>
+                    <img src="./img/sinister.jpeg" alt="sinister album">
+                </div>
+                <div class="img-desc">
+                    <div class="img-title">
+                        Sinister
+                    </div>
+                    <div class="name">
+                        Brano Nome
+                    </div>
+                </div>
+                <div class="icons">
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-folder"></i>
+                </div>
+            </div>
+
+            <div class="playbar-center">
+                <div class="buttons">
+                    <i class="fa-solid fa-shuffle"></i>
+                    <i class="fa-solid fa-backward-step"></i>
+                    <i class="fa-regular fa-circle-play"></i>
+                    <i class="fa-solid fa-forward-step"></i>
+                    <i class="fa-solid fa-rotate-right"></i>
+                </div>
+                <div class="play">
+                    <span class="playtime">0:25</span>
+                    <div class="volume">
+                        <div class="size"></div>
+                    </div>
+                    <span class="playtime">4:35</span>
+                </div>
+            </div>
+
+            <div class="playbar-right">
+
+                <i class="fa-solid fa-list"></i>
+                <i class="fa-solid fa-desktop"></i>
+                <i class="fa-solid fa-volume-high"></i>
+
+                <div class="volume">
+                    <div class="size"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
