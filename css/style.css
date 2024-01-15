@@ -25,8 +25,6 @@ body{
 .side-bar{
     width: 230px;
     height: calc(100vh - 90px);
-    padding: 0 20px;
-
 
     background-color: #000000;
     overflow: auto;
@@ -36,7 +34,7 @@ body{
     justify-content: space-between;
 }
 
-
+/* parte superiore */
 .side-top{
     margin-bottom: 10px;
     
@@ -44,7 +42,7 @@ body{
     flex-direction: column;   
 }
 .logo img.big{
-    margin: 20px 0;
+    margin: 20px 20px;
     max-width: 130px;
 }
 .logo .small{
@@ -52,7 +50,6 @@ body{
 }
 .side-menu{
     color: white;
-    opacity: 0.6;
 }
 .side-menu > *{
     margin-bottom: 12px;
@@ -63,6 +60,14 @@ body{
 .side-menu img{
     width: 24px;
 }
+
+.home,
+.search,
+.library{
+    padding: 0 20px;
+    opacity: 0.6;
+
+}
 .side-menu a{
     font-size: 10px;
     font-weight: bold;
@@ -72,13 +77,19 @@ body{
 }
 .side-playlist{
     margin-bottom: 14px;
+    padding: 0 20px;
 
     color: white;
     font-size: 10px;
     font-weight: bold;
 }
 .create{
+    padding: 0 20px;
+
     color: white;
+}
+.new-name{
+    padding: 0 20px;
 }
 .create a, .new-name a{
     text-decoration: none;
@@ -95,21 +106,27 @@ body{
 .create .fa-solid{
     font-size: 30px;
 }
+
+/* parte inferirore */
+.side-bottom{
+    padding: 0 20px;
+}
 .install{
     padding-bottom: 12px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #727272;
 
     margin-bottom: 12px;
-
-    color: white;
-    opacity: 0.6;
 }
 .install img{
     width: 14px;
 }
-.install span{
+.install a{
     font-size: 10px;
     font-weight: bold;
+
+    color: white;
+    opacity: 0.6;
+    text-decoration: none;
 }
 .profile{
     padding-bottom: 8px;
@@ -128,7 +145,7 @@ body{
     font-size: 10px;
 }
 
-/* pagina completa */
+/* pagina centrale */
 .page{
     flex-grow: 1;
     
@@ -153,7 +170,14 @@ body{
     position: absolute;
     top: 32px;
     right: 34px;
+
+    transition: transform 0.5s;
 }
+/* hover */
+.upgrade-btn:hover{
+    transform: scale(1.1);
+}
+
 .upgrade-btn a{
     padding: 14px 40px;
     text-decoration: none;
@@ -187,6 +211,8 @@ body{
     text-decoration: none;
     color: white;
     opacity: 0.6;
+
+    padding-bottom: 10px;
 }
 
 /* categories */
@@ -221,6 +247,32 @@ body{
 }
 .img-container{
     min-width: 180px;
+    position: relative;
+}
+/* maschera */
+.play-song{
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    color: white;
+
+    transition: 0.3s;
+}
+.play-song:hover{
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.play-song .fa-regular{
+    font-size: 60px;
 }
 .img-container img{
     width: 100%;
@@ -241,7 +293,6 @@ body{
     color: #71767c;
     text-align: center;
 }
-
 
 
 /* playbar */
@@ -269,17 +320,18 @@ body{
 .playbar-left{
     width: 30%;
     align-items: center;
-
-    margin-right: 40px;
+    padding-right: 20px;
 }
 .playbar-left img{
     width: 42px;
 }
 .img-desc{
     padding-left: 10px;
-    padding-right: 40px;
 }
 .name, .icons{
+    padding-right: 40px;
+}
+.name, .icons .fa-regular{
     opacity: 0.6;
 }
 .icons .fa-regular:first-of-type{
@@ -303,12 +355,20 @@ body{
 }
 .buttons .fa-circle-play{
     font-size: 30px;
+
+    transition: transform 0.5s;
 }
+
+.buttons .fa-circle-play:hover{
+    transform: scale(1.2);
+}
+
 .play{
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 /* stilizzazione playbar */
 .volume{
     width: 100%;
@@ -317,18 +377,27 @@ body{
     position: relative;
 
     background-color: #71767c;
+    border-radius: 20px;
 }
 .size{
-    width: 100%;
     height: 4px;
 
     top: 0;
     left: 0;
     position: absolute;
 
+    position: relative;
+
+    background-color: white;
+    border-radius: 20px;
+}
+.dot{
+    opacity: 0;
+    position: absolute;
+
+    border-radius: 50%;
     background-color: white;
 }
-
 .play .playtime{
     font-size: 10px;
     font-weight: bold;
@@ -338,8 +407,26 @@ body{
     margin: 0 20px;
 }
 .playbar-center .size{
-    max-width: 84px;
+    max-width: 430px;
+    width: 20%;
 }
+.playbar-center .dot{
+    width: 15px;
+    height: 15px;
+
+    top: -6px;
+    right: 0;
+}
+
+/* hover playbar */
+.play:hover .dot{
+    opacity: 1;
+
+}
+.play:hover .size{
+    background-color: #b7f45b;
+}
+
 
 /* parte destra */
 .playbar-right{
@@ -348,28 +435,55 @@ body{
     align-items: center;
     gap: 14px;
 
-    margin-left: 20px;
+    padding-left: 20px;
 }
 
-.playbar-right .size{
-    max-width: 24px;
-}
 .playbar-right .volume{
     max-width: 180px;
 }
+.playbar-right .size{
+    max-width: 180px;
+    width: 20%;
+}
+.playbar-right .dot{
+    width: 10px;
+    height: 10px;
+
+    top: -3px;
+    right: 0;
+}
+
+/* hover */
+.playbar-right .volume:hover .dot{
+    opacity: 1;
+}
+.playbar-right .volume:hover .size{
+    background-color: #b7f45b;
+}
 
 
 
+/* Hover opacity */
+.navlinks a:hover{
+    opacity: 1;
 
-
-
-
-
-
-
-
-
-
+    border-bottom: 2px solid #b7f45b;
+    padding-bottom: 8px;
+}
+.home:hover,
+.search:hover,
+.library:hover,
+.create:hover,
+.new-name:hover{
+    border-left: 2px solid #b7f45b;
+    opacity: 1;
+}
+.install a:hover{
+    opacity: 1;
+}
+.playbar-left .fa-regular:hover{
+    opacity: 1;
+}
 
 
 
@@ -387,7 +501,7 @@ body{
         flex-wrap: wrap;
     }
     .navlinks a{
-        margin-bottom: 32px;
+        margin-bottom: 22px;
     }
     .navbar{
         padding: 16px 40px 0px;
@@ -420,7 +534,6 @@ body{
     }
     .side-bar{
         width: 50px;
-        padding: 0;
 
         align-items: center;
     }
@@ -438,26 +551,51 @@ body{
         padding-top: 6px;
         padding-bottom: 16px;
     }
-    .bottom-container{
+    .side-bottom{
         display: flex;
         flex-direction: column;
         align-items: center;
+
+        padding: 0;
     }
+
+
+    /* contenuti side bar nascosti */
     .side-menu a,
     .side-playlist,
     .top-container ul,
-    .bottom-container .install span,
-    .bottom-container .profile-name{
+    .side-bottom .install a,
+    .side-bottom .profile-name{
         display: none;
+    }
+    
+    
+    /* rimozione padding */
+    .home,
+    .search,
+    .library{
+        padding: 0;
     }
     .install{
         border: none;
         padding-right: 2px;
     }
+
+
+    /* stilizzazione font */
     .navlinks{
         font-size: 0.7em;
     }
     .upgrade-btn a{
         font-size: 0.7em;
     }
+
+    .playbar-center .buttons,
+    .playbar-right .fa-solid{
+        font-size: 0.8em;
+    }
+    .buttons .fa-circle-play{
+        font-size: 26px;
+    }
+
 }

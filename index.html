@@ -72,11 +72,12 @@
                     </ul>
                 </div>
             </div>
-            <div class="bottom-container">
+            <div class="side-bottom">
                 <div class="install flex-c">
                     <img src="./img/download.svg" alt="download">
-                    <span>Installa app</span>
+                    <a href="#">Installa app</a>
                 </div>
+
                 <div class="profile flex-c">
                     <img src="./img/profile.svg" alt="profile picture">
                     <span class="profile-name">John Doe</span>
@@ -111,8 +112,12 @@
                     <h1 class="categories-name">Recently played</h1>
                     <div class="container-playlist">
                         <div class="playlist">
+
                             <div class="img-container">
                                 <img src="./img/metal_lifting.jpg" alt="immagine copertina metal">
+                                <div class="play-song">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                </div>
                             </div>
                             <div class="playlist-name">
                                 Heavy Metal
@@ -125,6 +130,9 @@
                         <div class="playlist">
                             <div class="img-container">
                                 <img src="./img/stranger.jpeg" alt="immagine copertina stranger things">
+                                <div class="play-song">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                </div>
                             </div>
                             <div class="playlist-name">
                                 Stranger Things, Vol. 1 (a Netflix Original Series Soundtrack)
@@ -137,6 +145,9 @@
                         <div class="playlist">
                             <div class="img-container">
                                 <img src="./img/aquietplace.jpeg" alt="immagine copertina A quiet place">
+                                <div class="play-song">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                </div>
                             </div>
                             <div class="playlist-name">
                                 A quiet place
@@ -149,6 +160,9 @@
                         <div class="playlist">
                             <div class="img-container">
                                 <img src="./img/split.jpeg" alt="immagine copertina split">
+                                <div class="play-song">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                </div>
                             </div>
                             <div class="playlist-name">
                                 Split
@@ -161,6 +175,9 @@
                         <div class="playlist">
                             <div class="img-container">
                                 <img src="./img/cure.jpeg" alt="immagine copertina cure">
+                                <div class="play-song">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                </div>
                             </div>
                             <div class="playlist-name">
                                 A cure for wellness
@@ -173,6 +190,9 @@
                         <div class="playlist">
                             <div class="img-container">
                                 <img src="./img/sinister.jpeg" alt="immagine copertina sinister">
+                                <div class="play-song">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                </div>
                             </div>
                             <div class="playlist-name">
                                 Sinister
@@ -193,6 +213,9 @@
                         <div class="playlist">
                             <div class="img-container">
                                 <img src="./img/radar.jpeg" alt="immagine creati per te">
+                                <div class="play-song">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                </div>
                             </div>
                             <div class="playlist-name">
                                 Release Radar
@@ -202,6 +225,9 @@
                         <div class="playlist">
                             <div class="img-container">
                                 <img src="./img/mixdaily.jpeg" alt="immagine creati per te">
+                                <div class="play-song">
+                                    <i class="fa-regular fa-circle-play"></i>
+                                </div>
                             </div>
                             <div class="playlist-name">
                                 Daily Mix 1
@@ -244,6 +270,7 @@
     <div id="play-bar">
         <div class="play-bar-flex">
 
+            <!-- parte sinistra -->
             <div class="playbar-left">
                 <div>
                     <img src="./img/sinister.jpeg" alt="sinister album">
@@ -262,6 +289,7 @@
                 </div>
             </div>
 
+            <!-- parte centrale -->
             <div class="playbar-center">
                 <div class="buttons">
                     <i class="fa-solid fa-shuffle"></i>
@@ -273,12 +301,15 @@
                 <div class="play">
                     <span class="playtime">0:25</span>
                     <div class="volume">
-                        <div class="size"></div>
+                        <div class="size">
+                            <div class="dot"></div>
+                        </div>
                     </div>
                     <span class="playtime">4:35</span>
                 </div>
             </div>
 
+            <!-- parte destra -->
             <div class="playbar-right">
 
                 <i class="fa-solid fa-list"></i>
@@ -286,7 +317,9 @@
                 <i class="fa-solid fa-volume-high"></i>
 
                 <div class="volume">
-                    <div class="size"></div>
+                    <div class="size">
+                        <div class="dot"></div>
+                    </div>
                 </div>
             </div>
         </div>
